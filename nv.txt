@@ -1,0 +1,4 @@
+REDIS_HOST=redis-19038.c251.east-us-mz.azure.cloud.redislabs.com
+REDIS_PORT=19038
+REDIS_PASSWORD=MUGDHCuBxQqvyMp4HBJI7e4eqU1FKQ0X
+REDIS_TLS=true
