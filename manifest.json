@@ -1,0 +1,12 @@
+{
+  "name": "HandyFlix - Movies & Series",
+  "short_name": "HandyFlix",
+  "description": "Stream your favorite movies and series anytime, anywhere with HandyFlix. Your ultimate entertainment hub for unlimited streaming.",
+  "icons": [
+    {
+      "src": "/IMG-20251115-WA0368.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg"
+    }
+  ]
+}

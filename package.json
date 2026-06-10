@@ -1,0 +1,19 @@
+{
+  "name": "handyflix",
+  "version": "1.0.0",
+  "description": "HandyFlix - Your favorite movies and series",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "axios": "^1.12.0",
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "redis": "^5.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

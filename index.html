@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyFlix - Stream Movies & Series Online | Your Ultimate Entertainment Hub</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/jpeg" href="/IMG-20251115-WA0368.jpg">
+    <link rel="apple-touch-icon" href="/IMG-20251115-WA0368.jpg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Stream your favorite movies and series anytime, anywhere with HandyFlix. Watch unlimited movies, TV shows, anime, and more. Your ultimate entertainment hub for streaming quality content.">
+    <meta name="keywords" content="HandyFlix, stream movies, watch series, online streaming, movies online, TV shows, anime streaming, entertainment, watch movies free, movie streaming platform">
+    <meta name="author" content="HandyFlix">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e50914">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://handyflix.com/">
+    <meta property="og:title" content="HandyFlix - Stream Movies & Series Online">
+    <meta property="og:description" content="Stream your favorite movies and series anytime, anywhere with HandyFlix. Your ultimate entertainment hub.">
+    <meta property="og:image" content="https://handyflix.com/IMG-20251115-WA0368.jpg">
+    <meta property="og:site_name" content="HandyFlix">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://handyflix.com/">
+    <meta name="twitter:title" content="HandyFlix - Stream Movies & Series Online">
+    <meta name="twitter:description" content="Stream your favorite movies and series anytime, anywhere with HandyFlix. Your ultimate entertainment hub.">
+    <meta name="twitter:image" content="https://handyflix.com/IMG-20251115-WA0368.jpg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://handyflix.com/">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "HandyFlix",
+      "url": "https://handyflix.com/",
+      "description": "Stream your favorite movies and series anytime, anywhere",
+      "logo": "https://handyflix.com/IMG-20251115-WA0368.jpg",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://handyflix.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HandyFlix",
+      "url": "https://handyflix.com/",
+      "logo": "https://handyflix.com/IMG-20251115-WA0368.jpg",
+      "description": "Your ultimate entertainment hub for streaming movies and series",
+      "sameAs": [
+        "https://github.com/mr-Colab/A"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo-wrapper">
+                <img src="/IMG-20251115-WA0368.jpg" alt="HandyFlix Logo" id="loading-logo" loading="lazy">
+                <div class="loading-pulse"></div>
+            </div>
+            <div class="loading-brand">
+                <span class="brand-handy">Handy</span><span class="brand-flix">Flix</span>
+            </div>
+            <div class="loading-tagline">Your Ultimate Entertainment Hub</div>
+            <div class="loading-spinner-wrapper">
+                <div class="loading-spinner"></div>
+                <div class="loading-progress-bar">
+                    <div class="loading-progress-fill"></div>
+                </div>
+            </div>
+            <div class="loading-text">Loading amazing content...</div>
+        </div>
+        <div class="loading-background">
+            <div class="loading-particle"></div>
+            <div class="loading-particle"></div>
+            <div class="loading-particle"></div>
+            <div class="loading-particle"></div>
+            <div class="loading-particle"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="/" class="logo">
+            <img src="/IMG-20251115-WA0368.jpg" alt="HandyFlix Logo" class="logo-img" loading="lazy">
+            <div class="logo-text">
+                <span>Handy</span><span>Flix</span>
+            </div>
+        </a>
+        <div class="header-actions">
+            <!-- Download APK button temporarily hidden - app under maintenance
+            <a href="https://github.com/mr-Colab/Andyflixapk/raw/main/Handy%20Flix.apk" class="download-app-btn" id="header-download-btn" title="Download HandyFlix APK" download>
+                <i class="fas fa-download"></i>
+                <span class="download-text">Download APK</span>
+            </a>
+            -->
+            <a href="https://whatsapp.com/channel/0029VaeNfM11HspqGPHmUb0c" class="infos-partage-btn" target="_blank" rel="noopener noreferrer" title="INFOS PARTAGE - WhatsApp Channel">
+                <img src="/Screenshot_20251204-022611_WhatsApp.png" alt="INFOS PARTAGE" class="infos-partage-logo">
+            </a>
+            <button class="search-btn" id="search-toggle">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" id="hero-title">Featured Movie</h1>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="hero-play-btn">
+                        <i class="fas fa-play"></i> Play Now
+                    </button>
+                    <button class="btn btn-secondary" id="hero-info-btn">
+                        <i class="fas fa-info-circle"></i> More Info
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories - Moved to top for better visibility -->
+        <section class="section genre-section">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-film"></i> Browse by Genre</h2>
+            </div>
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="category-tab" data-category="action">
+                    <i class="fas fa-bolt"></i> Action
+                </button>
+                <button class="category-tab" data-category="comedy">
+                    <i class="fas fa-laugh"></i> Comedy
+                </button>
+                <button class="category-tab" data-category="drama">
+                    <i class="fas fa-theater-masks"></i> Drama
+                </button>
+                <button class="category-tab" data-category="sci-fi">
+                    <i class="fas fa-rocket"></i> Sci-Fi
+                </button>
+                <button class="category-tab" data-category="horror">
+                    <i class="fas fa-ghost"></i> Horror
+                </button>
+                <button class="category-tab" data-category="anime">
+                    <i class="fas fa-dragon"></i> Anime
+                </button>
+                <button class="category-tab" data-category="korean">
+                    <i class="fas fa-heart"></i> K-Drama
+                </button>
+                <button class="category-tab" data-category="nollywood">
+                    <i class="fas fa-video"></i> Nollywood
+                </button>
+                <button class="category-tab" data-category="bollywood">
+                    <i class="fas fa-star"></i> Bollywood
+                </button>
+                <button class="category-tab" data-category="chinese">
+                    <i class="fas fa-yin-yang"></i> Chinese
+                </button>
+                <button class="category-tab" data-category="romance">
+                    <i class="fas fa-heart"></i> Romance
+                </button>
+                <button class="category-tab" data-category="teen-movies">
+                    <i class="fas fa-users"></i> Teen Movies
+                </button>
+                <button class="category-tab" data-category="teen-series">
+                    <i class="fas fa-tv"></i> Teen Series
+                </button>
+                <button class="category-tab" data-category="disney">
+                    <i class="fas fa-magic"></i> Disney
+                </button>
+                <button class="category-tab" data-category="marvel">
+                    <i class="fas fa-mask"></i> Marvel
+                </button>
+            </div>
+        </section>
+
+        <!-- Filtered Content Section -->
+        <section class="section" id="filtered-content-section" style="display: none;">
+            <div class="section-header">
+                <h2 class="section-title" id="filtered-title">All Movies & Series</h2>
+            </div>
+            <div class="movies-grid" id="filtered-movies">
+                <!-- Dynamic filtered content -->
+            </div>
+        </section>
+
+        <!-- Anime -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Anime</h2>
+                <a href="/category/anime" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="anime-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Continue Watching -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Continue Watching</h2>
+                <a href="#" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="continue-watching">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Top Trending -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Top Trending</h2>
+                <a href="/category/trending" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="top-trending">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Nollywood -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Nollywood</h2>
+                <a href="/category/nollywood" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="nollywood-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Chinese Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Chinese Movies</h2>
+                <a href="/category/chinese" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="chinese-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Romance -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Romance</h2>
+                <a href="/category/romance" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="romance-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Teen Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Teen Movies</h2>
+                <a href="/category/teen-movies" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="teen-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Teen Series -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Teen Series</h2>
+                <a href="/category/teen-series" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="teen-series">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Halloween Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Halloween Movies</h2>
+                <a href="/category/new-releases" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="new-releases">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Disney Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Disney Movies</h2>
+                <a href="/category/disney" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="disney-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Marvel Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Marvel Movies</h2>
+                <a href="/category/marvel" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="marvel-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Popular Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Popular Movies</h2>
+                <a href="/category/popular-movies" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="popular-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Popular Series -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Popular Series</h2>
+                <a href="/category/popular-series" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="popular-series">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Horror -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Horror</h2>
+                <a href="/category/horror" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="horror-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="/1762982416075.jpg" alt="HandyFlix" class="footer-logo-img">
+                    <div class="footer-logo-text">
+                        <span>Handy</span><span>Flix</span>
+                    </div>
+                </div>
+                <p class="footer-tagline">Your ultimate destination for movies and series</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/category/trending">Trending</a></li>
+                    <li><a href="/category/new-releases">New Releases</a></li>
+                    <li><a href="/search.html">Search</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="/category/action">Action</a></li>
+                    <li><a href="/category/anime">Anime</a></li>
+                    <li><a href="/category/romance">Romance</a></li>
+                    <li><a href="/category/horror">Horror</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Contact Us</h4>
+                <div class="footer-contact">
+                    <a href="mailto:contact@freehandyflix.online" class="footer-email">
+                        <i class="fas fa-envelope"></i>
+                        contact@freehandyflix.online
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Special Thanks Credit -->
+        <div class="special-thanks">
+            <div class="special-thanks-content">
+                <span class="thanks-label"><i class="fas fa-heart"></i> Special Thanks to</span>
+                <span class="thanks-name">INFOS PARTAGE</span>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 HandyFlix Studio. All rights reserved.</p>
+            <p class="creator-credit">Created by <span class="creator-name">Andy Mrlit</span></p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <span>•</span>
+                <a href="#">Terms of Service</a>
+                <span>•</span>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+    </html>

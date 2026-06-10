@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - HandyFlix</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/jpeg" href="/IMG-20251115-WA0368.jpg">
+    <link rel="apple-touch-icon" href="/IMG-20251115-WA0368.jpg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="View detailed information about movies and series on HandyFlix. Watch trailers, read descriptions, and start streaming.">
+    <meta name="keywords" content="movie details, movie info, HandyFlix movies, watch movies">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e50914">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <a href="/" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <a href="/" class="logo">
+                <img src="/IMG-20251115-WA0368.jpg" alt="HandyFlix Logo" class="logo-img" loading="lazy">
+                <div class="logo-text">
+                    <span>Handy</span><span>Flix</span>
+                </div>
+            </a>
+        </div>
+        <a href="/search" class="search-btn">
+            <i class="fas fa-search"></i>
+        </a>
+    </header>
+
+    <!-- Movie Details Page -->
+    <div class="details-page">
+        <div class="movie-details-content" id="movie-details-content">
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

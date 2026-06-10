@@ -1,0 +1,254 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Video Player - HandyFlix</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/jpeg" href="/IMG-20251115-WA0368.jpg">
+    <link rel="apple-touch-icon" href="/IMG-20251115-WA0368.jpg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Watch movies and series online with HandyFlix's high-quality video player.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#e50914">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Player Page -->
+    <div class="player-page">
+        <div class="player-header">
+            <a href="javascript:history.back()" class="player-back">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="player-title" id="player-title">Loading...</div>
+        </div>
+        
+        <div class="player-content">
+            <!-- Custom Loading Spinner Overlay for Plyr -->
+            <div class="plyr-loading-overlay" id="plyr-loading-overlay">
+                <div class="plyr-loading-spinner">
+                    <div class="spinner-circle"></div>
+                    <div class="loading-text">Loading video...</div>
+                </div>
+            </div>
+            
+            <!-- Plyr Video Player -->
+            <div class="video-container" id="video-container">
+                <video id="player-video" playsinline webkit-playsinline crossorigin controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Legacy Custom Player (Hidden) -->
+            <div class="custom-video-player" id="custom-video-player" style="display: none;">
+                <!-- Tap Zones for Skip Controls -->
+                <div class="tap-zone tap-zone-left" id="tap-zone-left">
+                    <div class="tap-feedback" id="tap-feedback-left">
+                        <i class="fas fa-backward"></i>
+                        <span>10s</span>
+                    </div>
+                </div>
+                <div class="tap-zone tap-zone-right" id="tap-zone-right">
+                    <div class="tap-feedback" id="tap-feedback-right">
+                        <i class="fas fa-forward"></i>
+                        <span>10s</span>
+                    </div>
+                </div>
+                
+                <!-- Player Loading Spinner -->
+                <div class="player-loading">
+                    <div class="player-spinner"></div>
+                </div>
+                
+                <!-- Lock Indicator -->
+                <div class="lock-indicator" id="lock-indicator">
+                    <i class="fas fa-lock"></i> Screen Locked - Tap to unlock
+                </div>
+                
+                <!-- Overlay Controls -->
+                <div class="player-overlay" id="player-overlay">
+                    <!-- Top Controls -->
+                    <div class="player-top-controls">
+                        <div class="player-left-controls">
+                            <button class="player-control-btn" id="back-btn">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                            <div class="player-title" id="overlay-title">Movie Title</div>
+                        </div>
+                        <div class="player-right-controls">
+                            <button class="player-control-btn" id="miniplayer-btn">
+                                <i class="fas fa-compress"></i>
+                            </button>
+                            <button class="player-control-btn" id="settings-btn">
+                                <i class="fas fa-cog"></i>
+                            </button>
+                            <button class="player-control-btn" id="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button class="player-control-btn" id="lock-btn">
+                                <i class="fas fa-lock"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Center Controls -->
+                    <div class="player-center-controls">
+                        <button class="player-big-btn" id="rewind-btn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button class="player-big-btn" id="play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="player-big-btn" id="forward-btn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Bottom Controls -->
+                    <div class="player-bottom-controls">
+                        <!-- Progress Bar -->
+                        <div class="progress-container">
+                            <div class="time-display" id="current-time">0:00</div>
+                            <div class="progress-bar" id="progress-bar">
+                                <div class="progress-filled" id="progress-filled"></div>
+                                <div class="progress-handle" id="progress-handle"></div>
+                            </div>
+                            <div class="time-display" id="duration">0:00</div>
+                        </div>
+                        
+                        <!-- Action Controls -->
+                        <div class="player-action-controls">
+                            <div class="player-action-left">
+                                <button class="player-action-btn" id="screenshot-btn">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="player-action-right">
+                                <button class="player-action-btn" id="fullscreen-btn">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Settings Menu -->
+                <div class="settings-menu" id="settings-menu">
+                    <div class="settings-option" id="quality-option">
+                        Quality <i class="fas fa-chevron-right"></i>
+                        <div class="settings-submenu" id="quality-submenu">
+                            <div class="settings-suboption" data-quality="auto">Auto</div>
+                            <div class="settings-suboption" data-quality="1080">1080p</div>
+                            <div class="settings-suboption" data-quality="720">720p</div>
+                            <div class="settings-suboption" data-quality="480">480p</div>
+                            <div class="settings-suboption" data-quality="360">360p</div>
+                        </div>
+                    </div>
+                    <div class="settings-option" id="speed-option">
+                        Playback Speed <i class="fas fa-chevron-right"></i>
+                        <div class="settings-submenu" id="speed-submenu">
+                            <div class="settings-suboption" data-speed="0.5">0.5x</div>
+                            <div class="settings-suboption" data-speed="0.75">0.75x</div>
+                            <div class="settings-suboption active" data-speed="1">Normal</div>
+                            <div class="settings-suboption" data-speed="1.25">1.25x</div>
+                            <div class="settings-suboption" data-speed="1.5">1.5x</div>
+                            <div class="settings-suboption" data-speed="2">2x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quality Selector (Legacy - kept for compatibility) -->
+            <div class="quality-selector" id="quality-selector">
+                <div class="quality-title">Quality</div>
+                <div class="quality-options" id="quality-options">
+                    <!-- Quality options will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Content (Hidden in Fullscreen) -->
+        <div class="player-related">
+            <h3 class="related-title">Similar Movies</h3>
+            <div class="movies-row" id="player-related-movies">
+                <!-- Similar movies will be loaded here -->
+            </div>
+            
+            <h3 class="related-title" style="margin-top: 1rem;">Trending Now</h3>
+            <div class="movies-row" id="player-trending-movies">
+                <!-- Trending movies will be loaded here -->
+            </div>
+            
+            <h3 class="related-title" style="margin-top: 1rem;">Romance</h3>
+            <div class="movies-row" id="player-romance-movies">
+                <!-- Romance movies will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Miniplayer Container -->
+    <div class="miniplayer" id="miniplayer">
+        <div class="custom-video-player">
+            <video id="miniplayer-video">
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Miniplayer Overlay Controls -->
+            <div class="player-overlay" id="miniplayer-overlay">
+                <!-- Top Controls -->
+                <div class="player-top-controls">
+                    <div class="player-left-controls">
+                        <button class="player-control-btn" id="miniplayer-close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="player-title" id="miniplayer-title">Movie Title</div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Controls -->
+                <div class="player-bottom-controls">
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="time-display" id="miniplayer-current-time">0:00</div>
+                        <div class="progress-bar" id="miniplayer-progress-bar">
+                            <div class="progress-filled" id="miniplayer-progress-filled"></div>
+                            <div class="progress-handle" id="miniplayer-progress-handle"></div>
+                        </div>
+                        <div class="time-display" id="miniplayer-duration">0:00</div>
+                    </div>
+                    
+                    <!-- Action Controls -->
+                    <div class="player-action-controls">
+                        <div class="player-action-left">
+                            <button class="player-action-btn" id="miniplayer-play-pause-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="player-action-right">
+                            <button class="player-action-btn" id="miniplayer-fullscreen-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plyr JS -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="app.js"></script>
+</body>
+  </html>
+
+
+

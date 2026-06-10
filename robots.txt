@@ -1,0 +1,24 @@
+# Robots.txt for HandyFlix
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of API endpoints if any
+Disallow: /api/
+
+# Disallow crawling of admin sections if any
+Disallow: /admin/
+
+# Allow crawling of all pages and assets
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Sitemap location
+Sitemap: https://handyflix.com/sitemap.xml
