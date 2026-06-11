@@ -1,4 +1,4 @@
-class HandyFlix {
+class EleenFlix{
     constructor() {
         // Use local API (built-in API integrated in server.js)
         this.baseURL = '';

@@ -1,7 +1,7 @@
 {
-  "name": "handyflix",
+  "name": "Eleenflix",
   "version": "1.0.0",
-  "description": "HandyFlix - Your favorite movies and series",
+  "description": "EleenFlix - Your favorite movies and series",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
