@@ -1,4 +1,4 @@
-# Robots.txt for EleenFlix
+# Robots.txt for HandyFlix
 # Allow all search engines to crawl the site
 
 User-agent: *
@@ -21,4 +21,4 @@ Allow: /*.svg
 Allow: /*.webp
 
 # Sitemap location
-Sitemap: https://eleenflix.com/sitemap.xml
+Sitemap: https://handyflix.com/sitemap.xml
