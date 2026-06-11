@@ -4,12 +4,12 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://freehandyflix.online/</loc>
+    <loc>https://freeeleenflix.online/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://freehandyflix.online/IMG-20251115-WA0368.jpg</image:loc>
+      <image:loc>https://freeeleenflix.online/IMG-20251115-WA0368.jpg</image:loc>
       <image:title>EleenFlix Logo</image:title>
       <image:caption>EleenFlix - Your Ultimate Entertainment Hub</image:caption>
     </image:image>
@@ -17,7 +17,7 @@
   
   <!-- Search Page -->
   <url>
-    <loc>https://freehandyflix.online/search</loc>
+    <loc>https://freeeleenflix.online/search</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -25,56 +25,56 @@
   
   <!-- Category Pages -->
   <url>
-    <loc>https://freehandyflix.online/category/action</loc>
+    <loc>https://freeeleenflix.online/category/action</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://freehandyflix.online/category/comedy</loc>
+    <loc>https://freeeleenflix.online/category/comedy</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://freehandyflix.online/category/drama</loc>
+    <loc>https://freeeleenflix.online/category/drama</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://freehandyflix.online/category/sci-fi</loc>
+    <loc>https://freeeleenflix.online/category/sci-fi</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://freehandyflix.online/category/horror</loc>
+    <loc>https://freeeleenflix.online/category/horror</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://freehandyflix.online/category/romance</loc>
+    <loc>https://freeeleenflix.online/category/romance</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://freehandyflix.online/category/thriller</loc>
+    <loc>https://freeeleenflix.online/category/thriller</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://freehandyflix.online/category/anime</loc>
+    <loc>https://freeeleenflix.online/category/anime</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

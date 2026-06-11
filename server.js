@@ -364,7 +364,7 @@ app.get('/test-french', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`HandyFlix server running on port ${PORT}`);
+  console.log(`EleenFlix server running on port ${PORT}`);
   console.log(`API endpoints available at http://localhost:${PORT}/api/`);
 });
 

@@ -21,4 +21,4 @@ Allow: /*.svg
 Allow: /*.webp
 
 # Sitemap location
-Sitemap: https://handyflix.com/sitemap.xml
+Sitemap: https://eleenflix.com/sitemap.xml
