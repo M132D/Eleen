@@ -1,4 +1,4 @@
-# EleenFlix - Movie Streaming Web App
+# HandyFlix - Movie Streaming Web App
 
 A web-based movie streaming application integrated with MovieBox API.
 
@@ -84,8 +84,8 @@ Then navigate to `http://localhost:8000` in your browser.
 
 ### Download Mobile App
 
-Download the EleenFlix Android APK:
-[Download APK](https://github.com/mr-Colab/Andyflixapk/raw/main/Eleen%20Flix.apk)
+Download the HandyFlix Android APK:
+[Download APK](https://github.com/mr-Colab/Andyflixapk/raw/main/Handy%20Flix.apk)
 
 ## Project Structure
 

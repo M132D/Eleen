@@ -1,4 +1,4 @@
-class EleenFlix {
+class HandyFlix {
     constructor() {
         // Use local API (built-in API integrated in server.js)
         this.baseURL = '';
@@ -1860,7 +1860,7 @@ class EleenFlix {
 
 // Page-specific initialization
 document.addEventListener('DOMContentLoaded', () => {
-    const handyFlix = new EleenFlix();
+    const handyFlix = new HandyFlix();
     
     if (window.location.pathname === '/search') {
         const searchInput = document.getElementById('search-input');
@@ -1921,7 +1921,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-EleenFlix.prototype.loadMovieDetails = async function(movieId) {
+HandyFlix.prototype.loadMovieDetails = async function(movieId) {
     try {
         const movieInfo = await this.getMovieInfo(movieId);
         if (!movieInfo || !movieInfo.success) {
@@ -1936,7 +1936,7 @@ EleenFlix.prototype.loadMovieDetails = async function(movieId) {
     }
 };
 
-EleenFlix.prototype.renderMovieDetails = async function(movieData) {
+HandyFlix.prototype.renderMovieDetails = async function(movieData) {
     const movie = movieData.subject;
     const isSeries = movie.subjectType === 2;
     
@@ -2038,7 +2038,7 @@ EleenFlix.prototype.renderMovieDetails = async function(movieData) {
     }
 };
 
-EleenFlix.prototype.loadCastImages = function() {
+HandyFlix.prototype.loadCastImages = function() {
     const castAvatars = document.querySelectorAll('.cast-avatar[data-src]');
     
     castAvatars.forEach((img, index) => {
@@ -2069,7 +2069,7 @@ EleenFlix.prototype.loadCastImages = function() {
     });
 };
 
-EleenFlix.prototype.setupTrailer = function() {
+HandyFlix.prototype.setupTrailer = function() {
     const playPauseBtn = document.getElementById('trailer-play-pause');
     const restartBtn = document.getElementById('trailer-restart');
     const trailerVideo = document.getElementById('trailer-video');
@@ -2104,7 +2104,7 @@ EleenFlix.prototype.setupTrailer = function() {
     }
 };
 
-EleenFlix.prototype.renderSeasons = async function(seasons, movieId) {
+HandyFlix.prototype.renderSeasons = async function(seasons, movieId) {
     const sortedSeasons = seasons.sort((a, b) => a.se - b.se);
     
     let seasonsHtml = '<div class="seasons-section"><h3 class="seasons-title">Episodes & Seasons</h3>';
@@ -2146,7 +2146,7 @@ EleenFlix.prototype.renderSeasons = async function(seasons, movieId) {
     return seasonsHtml;
 };
 
-EleenFlix.prototype.setupCustomSeasonSelector = function(sortedSeasons, movieId) {
+HandyFlix.prototype.setupCustomSeasonSelector = function(sortedSeasons, movieId) {
     const customButton = document.getElementById('custom-season-button');
     const customOptions = document.getElementById('custom-season-options');
     const selectedText = document.getElementById('selected-season-text');
@@ -2197,7 +2197,7 @@ EleenFlix.prototype.setupCustomSeasonSelector = function(sortedSeasons, movieId)
     }
 };
 
-EleenFlix.prototype.renderEpisodesForSeason = function(season, episodeCount, movieId) {
+HandyFlix.prototype.renderEpisodesForSeason = function(season, episodeCount, movieId) {
     const episodesContainer = document.getElementById('episodes-container');
     if (!episodesContainer) return;
     
@@ -2225,7 +2225,7 @@ EleenFlix.prototype.renderEpisodesForSeason = function(season, episodeCount, mov
     });
 };
 
-EleenFlix.prototype.loadCategoryPage = async function(category) {
+HandyFlix.prototype.loadCategoryPage = async function(category) {
     const categoryTitle = document.getElementById('category-title');
     if (categoryTitle) {
         const title = category.split('-').map(word => 
@@ -2268,7 +2268,7 @@ EleenFlix.prototype.loadCategoryPage = async function(category) {
     }
 };
 
-EleenFlix.prototype.showDownloadOptions = async function(movieId) {
+HandyFlix.prototype.showDownloadOptions = async function(movieId) {
     const sources = await this.getDownloadSources(movieId);
     const downloadOptionsList = document.getElementById('download-options-list');
     const downloadOptions = document.getElementById('download-options');
@@ -2296,7 +2296,7 @@ EleenFlix.prototype.showDownloadOptions = async function(movieId) {
     }
 };
 
-EleenFlix.prototype.downloadMovie = function(url, filename) {
+HandyFlix.prototype.downloadMovie = function(url, filename) {
     const link = document.createElement('a');
     link.href = url;
     link.download = filename;
@@ -2306,7 +2306,7 @@ EleenFlix.prototype.downloadMovie = function(url, filename) {
     document.body.removeChild(link);
 };
 
-EleenFlix.prototype.renderTrailer = function(trailer) {
+HandyFlix.prototype.renderTrailer = function(trailer) {
     return `
         <div class="trailer-section">
             <div class="trailer-player">
@@ -2327,7 +2327,7 @@ EleenFlix.prototype.renderTrailer = function(trailer) {
     `;
 };
 
-EleenFlix.prototype.renderCast = function(stars) {
+HandyFlix.prototype.renderCast = function(stars) {
     return `
         <div class="cast-section">
             <h3 class="cast-title">Cast</h3>
